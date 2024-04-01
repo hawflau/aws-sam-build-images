@@ -1,5 +1,4 @@
 ARG IMAGE_ARCH
-# Update(hawflau): remove preview tag
 FROM public.ecr.aws/lambda/ruby:3.3-$IMAGE_ARCH
 
 RUN dnf remove -y microdnf-dnf && \
