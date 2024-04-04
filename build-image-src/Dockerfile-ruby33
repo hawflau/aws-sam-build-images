@@ -53,6 +53,9 @@ RUN pip3 install wheel
 
 COPY ATTRIBUTION.txt /
 
+# FIXME: remove below after we bump the bundled zlib version in SAM CLI Installer
+RUN mv /usr/local/aws-sam-cli/$SAM_CLI_VERSION/dist/_internal/libz.so.1 /usr/local/aws-sam-cli/$SAM_CLI_VERSION/dist/_internal/libz.so.1_
+
 # Compatible with initial base image
 ENTRYPOINT []
 CMD ["/bin/bash"]
